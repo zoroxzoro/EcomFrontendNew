@@ -1,19 +1,20 @@
 /** @type {import('tailwindcss').Config} */
+import tailwindcssAnimate from "tailwindcss-animate";
+
 export default {
-  darkMode: ["class"],
+  darkMode: ["class"], // Enables dark mode using a class
   content: [
     "./pages/**/*.{js,jsx}",
     "./components/**/*.{js,jsx}",
     "./app/**/*.{js,jsx}",
     "./src/**/*.{js,jsx}",
-  ],
-  prefix: "",
+  ], // Specifies where to scan for class names
   theme: {
     container: {
-      center: true,
-      padding: "2rem",
+      center: true, // Centers the container
+      padding: "2rem", // Adds padding to the container
       screens: {
-        "2xl": "1400px",
+        "2xl": "1400px", // Custom screen size for 2xl
       },
     },
     extend: {
@@ -73,5 +74,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [tailwindcssAnimate],
 };
